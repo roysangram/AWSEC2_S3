@@ -1,4 +1,39 @@
-# AWSECInstallation - boto3 for python
+# AWSEC
+
+Objective – 
+•	To build an application in AWS that uses EC2, S3 and SQS 
+•	Be familiar with EC2, S3 and sqs and to understand how they work in real time environment
+•	Understand how different aws component communicate to the application
+
+To achieve this first we need to build two apps: 
+1-	 Client App-: cc_clientapp.py
+2-	ec2_instance app-: cc_ec2_instance_app.py
+
+Client APP-:
+
+Create an application that should do the following:
+•	It should run locally on your machine.
+•	User inputs a comma-separated list of numbers.
+•	Puts this list in the S3-bucket (and remembers the key/pointer to this object).
+•	Puts a message in the SQS-inbox with a key/pointer to the object in the S3-bucket, along with a process to be executed on these numbers.
+•	Waits until a response is generated in the SQS-outbox (should contain a pointer to a new, and processed, object in the S3-bucket along with the process executed).
+•	Reads the result from the S3-bucket
+•	Prints the results along with the original numbers and the process that was done.
+•	Delete the message from sqs-outbox
+
+EC2- Instance APP-:
+
+Instance app should do the following 
+•	Run locally during development and testing phase and should run from EC2 instance 
+•	get the sqs message to be processed from sqs-inbox queue
+•	delete the message form sqs-inbox
+•	process the message and return the result
+•	update the result in S3 bucket
+update the result in outbox queue
+
+
+
+Installation - boto3 for python
 
 Check for python-pip installation - just run pip command , if it shows info and pip details then it is installed
 
