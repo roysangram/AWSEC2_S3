@@ -25,7 +25,7 @@ sqs = boto3.client('sqs')
 s3 = boto3.client('s3')
 
 list_of_nos=[5,6,7]
-bucket_name = "2017ht66117"
+bucket_name = "sroy_bucket1"
 key_name="S3_66117.txt"
 
 #message to sent to S3 bucket and inbox queue
