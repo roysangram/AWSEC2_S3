@@ -22,7 +22,7 @@ logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 # Get the service resource
 sqs = boto3.client('sqs')
 s3 = boto3.client('s3')
-bucket_name="2017ht66117"
+bucket_name="sroy-bucket1"
 
 
 # create a file to be uploaded into S3 bucket
